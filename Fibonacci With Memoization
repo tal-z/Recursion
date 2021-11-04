@@ -1,0 +1,19 @@
+"""
+This is my attempt at implementing the fibonacci sequence the only way that fully makes sense to me. 
+I'd like to better understand the recursive method, which this avoids via memoization.
+
+By: Tal Zaken
+Date: 2021-11-04
+"""
+
+# fibonacci sequence with memoization
+def fib(num):
+    for n in range(num):
+        if n <= 1:
+            a = 0
+            b = 1
+        else:
+            loss = a
+            a = b
+            b = b + loss
+        print(a + b)
